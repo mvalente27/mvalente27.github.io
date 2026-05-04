@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Michael Valente — Software Engineer</title>
+  <meta name="description" content="Software Engineer specializing in AI, automation, and full-stack development. Open to new opportunities." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="nav-inner container">
+      <span class="nav-logo">mv<span class="accent">.</span></span>
+      <ul class="nav-links">
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="container">
+      <div class="hero-badge">Open to opportunities</div>
+      <h1 class="hero-title">
+        Hi, I'm <span class="accent">Michael Valente</span>.<br />
+        I build software that thinks.
+      </h1>
+      <p class="hero-sub">
+        Self-taught software engineer transitioning from the trades into tech.
+        I build AI agents, automation pipelines, and full-stack products —
+        shipping things that learn, adapt, and run while you sleep.
+      </p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn-primary">See my work</a>
+        <a href="#contact" class="btn btn-ghost">Get in touch</a>
+      </div>
+      <div class="hero-stack">
+        <span class="tag">Python</span>
+        <span class="tag">TypeScript</span>
+        <span class="tag">Reinforcement Learning</span>
+        <span class="tag">React / Next.js</span>
+        <span class="tag">PostgreSQL</span>
+        <span class="tag">Supabase</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section">
+    <div class="container">
+      <h2 class="section-title">Featured Projects</h2>
+      <p class="section-sub">Five products built from scratch — each solving a real problem.</p>
+
+      <div class="projects-grid">
+
+        <!-- Live-or-Die-Bot (featured, full width) -->
+        <article class="card card--featured">
+          <div class="card-header">
+            <div class="card-icon">🤖</div>
+            <div class="card-meta">
+              <span class="card-status card-status--live">Active</span>
+            </div>
+          </div>
+          <h3 class="card-title">Live-or-Die Bot</h3>
+          <p class="card-desc">
+            Autonomous crypto trading bot powered by Q-Learning reinforcement learning.
+            Makes real-time buy / sell / hold decisions on Bitcoin using live CoinGecko prices,
+            ACD (Mark Fisher) signal context, and an Interactive Brokers paper-trading execution path.
+            The agent's Q-table persists across sessions so it keeps improving with every run.
+          </p>
+          <ul class="card-bullets">
+            <li>Q-Learning agent with epsilon-greedy exploration and persistent Q-table</li>
+            <li>ACD strategy engine — A/C levels, opening range, and directional signals</li>
+            <li>Interactive Brokers (TWS / Gateway) integration for multi-asset paper execution</li>
+            <li>State discretization over live price, balance, and position data</li>
+          </ul>
+          <div class="card-stack">
+            <span class="tag tag--sm">Python</span>
+            <span class="tag tag--sm">Reinforcement Learning</span>
+            <span class="tag tag--sm">IBKR API</span>
+            <span class="tag tag--sm">CoinGecko API</span>
+          </div>
+          <div class="card-links">
+            <a href="https://github.com/mvalente27/Live-or-die-bot" class="btn btn-outline btn-sm" target="_blank" rel="noopener">GitHub ↗</a>
+          </div>
+        </article>
+
+        <!-- Q-Signals -->
+        <article class="card">
+          <div class="card-header">
+            <div class="card-icon">📡</div>
+            <div class="card-meta">
+              <span class="card-status card-status--live">Live</span>
+            </div>
+          </div>
+          <h3 class="card-title">Q-Signals</h3>
+          <p class="card-desc">
+            Real-time market signals platform with a web War Room dashboard and a native Android app.
+            Surfaces actionable trade alerts via a REST API, packaged as a Capacitor Android app
+            for on-the-go access.
+          </p>
+          <ul class="card-bullets">
+            <li>Live signal feed via REST API at api.q-signals.com</li>
+            <li>War Room web dashboard — static, fast, no framework overhead</li>
+            <li>Android app (Capacitor wrapper) ready for Google Play distribution</li>
+            <li>AdSense + GA4 + Search Console integrated for monetization and analytics</li>
+          </ul>
+          <div class="card-stack">
+            <span class="tag tag--sm">Python</span>
+            <span class="tag tag--sm">Capacitor</span>
+            <span class="tag tag--sm">Android</span>
+            <span class="tag tag--sm">HTML / CSS / JS</span>
+          </div>
+          <div class="card-links">
+            <a href="https://q-signals.com" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Live Site ↗</a>
+            <a href="https://github.com/mvalente27/Live-or-die-bot" class="btn btn-outline btn-sm" target="_blank" rel="noopener">GitHub ↗</a>
+          </div>
+        </article>
+
+        <!-- UpkeepIQ -->
+        <article class="card">
+          <div class="card-header">
+            <div class="card-icon">🏠</div>
+            <div class="card-meta">
+              <span class="card-status card-status--live">Live</span>
+            </div>
+          </div>
+          <h3 class="card-title">UpkeepIQ</h3>
+          <p class="card-desc">
+            Smart home maintenance platform that tracks appliances, schedules recurring tasks,
+            and surfaces upcoming service windows before small problems become expensive ones.
+          </p>
+          <ul class="card-bullets">
+            <li>Appliance inventory with warranty and service history tracking</li>
+            <li>Automated maintenance reminders and scheduling</li>
+            <li>Cost tracking and service provider management</li>
+          </ul>
+          <div class="card-stack">
+            <span class="tag tag--sm">React</span>
+            <span class="tag tag--sm">Node.js</span>
+            <span class="tag tag--sm">PostgreSQL</span>
+          </div>
+          <div class="card-links">
+            <a href="https://upkeepiq.com" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Live Site ↗</a>
+            <a href="https://github.com/mvalente27/UpkeepIQ" class="btn btn-outline btn-sm" target="_blank" rel="noopener">GitHub ↗</a>
+          </div>
+        </article>
+
+        <!-- ChoreQuest -->
+        <article class="card">
+          <div class="card-header">
+            <div class="card-icon">✅</div>
+            <div class="card-meta">
+              <span class="card-status card-status--build">Offline</span>
+            </div>
+          </div>
+          <h3 class="card-title">ChoreQuest</h3>
+          <p class="card-desc">
+            Gamified household task manager that turns daily chores into quests, rewarding
+            completion with XP and streaks to keep every member of the household engaged.
+          </p>
+          <ul class="card-bullets">
+            <li>Quest-based task assignment with XP and level progression</li>
+            <li>Household member profiles and leaderboard</li>
+            <li>Recurring task templates and streak tracking</li>
+          </ul>
+          <div class="card-stack">
+            <span class="tag tag--sm">React Native</span>
+            <span class="tag tag--sm">Supabase</span>
+            <span class="tag tag--sm">TypeScript</span>
+          </div>
+          <div class="card-links">
+            <a href="https://github.com/mvalente27/ChoreQuest" class="btn btn-outline btn-sm" target="_blank" rel="noopener">GitHub ↗</a>
+          </div>
+        </article>
+
+        <!-- RenewFlow -->
+        <article class="card">
+          <div class="card-header">
+            <div class="card-icon">🔄</div>
+            <div class="card-meta">
+              <span class="card-status card-status--build">In Progress</span>
+            </div>
+          </div>
+          <h3 class="card-title">RenewFlow</h3>
+          <p class="card-desc">
+            Subscription and contract renewal tracker that alerts you before auto-renewals hit,
+            surfaces forgotten subscriptions, and gives you a clear view of recurring spend.
+          </p>
+          <ul class="card-bullets">
+            <li>Renewal calendar with configurable lead-time alerts</li>
+            <li>Spend categorization and monthly / annual cost rollups</li>
+            <li>Cancel or renegotiate workflow with notes and outcomes</li>
+          </ul>
+          <div class="card-stack">
+            <span class="tag tag--sm">Next.js</span>
+            <span class="tag tag--sm">Supabase</span>
+            <span class="tag tag--sm">TypeScript</span>
+          </div>
+          <div class="card-links">
+            <a href="https://github.com/mvalente27/RenewFlow" class="btn btn-outline btn-sm" target="_blank" rel="noopener">GitHub ↗</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section section--alt">
+    <div class="container about-grid">
+      <div class="about-text">
+        <h2 class="section-title">About me</h2>
+        <p>
+          I'm making a deliberate career transition into software engineering.
+          My background is in the trades, and I'm bringing the same mindset here —
+          build it right, figure out why it broke, and never ship something you
+          wouldn't stand behind.
+        </p>
+        <p>
+          I've spent the last several years teaching myself to code by building real products:
+          a live AI trading bot, a signals platform with a native Android app, a home maintenance
+          SaaS, and more. Every project on this page came from scratch — no bootcamp cohort project,
+          no tutorial clone.
+        </p>
+        <p>
+          I'm actively looking for a first role in tech where I can grow fast on a team that
+          cares about the craft. I learn fast, ship faster, and I'm not afraid of work that
+          doesn't have a clear answer yet.
+        </p>
+        <a href="https://linkedin.com/in/michaelvalentecmcaams91039634" class="btn btn-outline" target="_blank" rel="noopener">
+          LinkedIn ↗
+        </a>
+      </div>
+      <div class="skills-panel">
+        <h3 class="skills-title">Toolbox</h3>
+        <div class="skills-group">
+          <span class="skills-label">Languages</span>
+          <div class="skills-tags">
+            <span class="tag">Python</span>
+            <span class="tag">TypeScript</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">SQL</span>
+          </div>
+        </div>
+        <div class="skills-group">
+          <span class="skills-label">Frameworks &amp; Runtimes</span>
+          <div class="skills-tags">
+            <span class="tag">React</span>
+            <span class="tag">Next.js</span>
+            <span class="tag">React Native</span>
+            <span class="tag">Node.js</span>
+            <span class="tag">FastAPI</span>
+          </div>
+        </div>
+        <div class="skills-group">
+          <span class="skills-label">AI / ML</span>
+          <div class="skills-tags">
+            <span class="tag">Reinforcement Learning</span>
+            <span class="tag">Q-Learning</span>
+            <span class="tag">Claude API</span>
+            <span class="tag">OpenAI API</span>
+          </div>
+        </div>
+        <div class="skills-group">
+          <span class="skills-label">Data &amp; Infra</span>
+          <div class="skills-tags">
+            <span class="tag">PostgreSQL</span>
+            <span class="tag">Supabase</span>
+            <span class="tag">Git</span>
+            <span class="tag">GitHub Actions</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section">
+    <div class="container contact-wrap">
+      <h2 class="section-title">Let's work together</h2>
+      <p class="section-sub">
+        I'm actively looking for my first engineering role — full-time, contract, or
+        contract-to-hire. If something I built caught your eye, reach out.
+      </p>
+      <div class="contact-links">
+        <a href="mailto:Michael.valente1@gmail.com" class="contact-card">
+          <span class="contact-icon">✉️</span>
+          <span class="contact-label">Email</span>
+          <span class="contact-value">Michael.valente1@gmail.com</span>
+        </a>
+        <a href="https://github.com/mvalente27" class="contact-card" target="_blank" rel="noopener">
+          <span class="contact-icon">🐙</span>
+          <span class="contact-label">GitHub</span>
+          <span class="contact-value">github.com/mvalente27</span>
+        </a>
+        <a href="https://linkedin.com/in/michaelvalentecmcaams91039634" class="contact-card" target="_blank" rel="noopener">
+          <span class="contact-icon">💼</span>
+          <span class="contact-label">LinkedIn</span>
+          <span class="contact-value">linkedin.com/in/michaelvalentecmcaams</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <p>Built by Michael Valente · <span id="year"></span></p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
