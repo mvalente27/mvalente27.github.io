@@ -203,15 +203,15 @@ const doc = new Document({
 
       // Q-Signals
       ...projectHead(
-        "Q-Signals — 41-Module AI Stock Signal Platform",
+        "Q-Signals — AI-Powered Market Sentiment Research Platform",
         "https://q-signals.com",
-        "Python · PyTorch · FastAPI · Supabase · Capacitor 6 · Android · HTML / CSS / JS"
+        "Python · PyTorch · FastAPI · Supabase · Stripe · Capacitor 6 · Android · HTML / CSS / JS"
       ),
-      bullet("Designed a Dual-Gate Consensus system: a signal is issued only when |composite score| ≥ ±0.10 AND ≥60% of 41 modules agree — eliminating false positives from any single noisy indicator"),
-      bullet("41 modules span Elliott Wave, Fibonacci, 61 TA-Lib candlestick patterns, SEC EDGAR (insider/institutional 13F filings), FRED macro data, Reddit/StockTwits sentiment, earnings surprise, supply chain (EDGAR), and congressional trade activity"),
-      bullet("DQN agent (18K parameters, PyTorch) learns from T1/T2/T3 ATR-scaled price targets with horizon-dependent evaluation (24h / 2wk / 3mo); module weights adapt by live hit rate"),
-      bullet("FastAPI server (api.q-signals.com) with per-client rate limiting, API key auth, CORS hardening; DQN weights persisted to Supabase as base64 state_dict for cross-session continuity"),
-      bullet("Android app built with Capacitor 6 (War Room dashboard); static site deployed on Cloudflare Pages; AdSense + GA4 + Search Console integrated"),
+      bullet("Built an algorithmic sentiment research platform rating stocks and futures bullish / bearish / neutral — structured as a research publisher, not investment advice"),
+      bullet("Dual-Gate Consensus: rating published only when |composite score| >= +/-0.10 AND 60%+ of 41 modules agree — eliminates false positives from any single noisy indicator"),
+      bullet("41 modules span Elliott Wave, Fibonacci, 61 TA-Lib candlestick patterns, SEC EDGAR insider/institutional filings, FRED macro data, Reddit/StockTwits sentiment, and earnings surprise"),
+      bullet("DQN agent (18K parameters, PyTorch) evaluates sentiment accuracy against T1/T2/T3 ATR-scaled price targets across 24h / 2wk / 3mo horizons; module weights adapt by hit rate"),
+      bullet("FastAPI server (api.q-signals.com) with rate limiting, API key auth, CORS hardening; Stripe subscription billing; Supabase persistence; Android War Room app via Capacitor 6"),
 
       // DFS AI Agent
       ...projectHead(

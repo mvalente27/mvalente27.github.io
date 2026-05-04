@@ -105,18 +105,18 @@
               <span class="card-status card-status--live">Live</span>
             </div>
           </div>
-          <h3 class="card-title">Q-Signals — 41-Module AI Signal Platform</h3>
+          <h3 class="card-title">Q-Signals — AI-Powered Market Sentiment Research Platform</h3>
           <p class="card-desc">
-            Real-time stock signal platform powered by 41 analysis modules and a DQN reinforcement
-            learning agent (18K parameters). Signals require a Dual-Gate Consensus: composite score
-            ≥ ±0.10 AND 60% module agreement before any BUY or SELL is issued. Deployed as a
-            FastAPI server at <code>api.q-signals.com</code> with an Android app on Google Play.
+            Algorithmic sentiment research platform that rates stocks and futures as bullish, bearish,
+            or neutral using 41 analysis modules and a DQN reinforcement learning agent (18K parameters).
+            A Dual-Gate Consensus requires composite score ≥ ±0.10 AND 60% module agreement before
+            any sentiment rating is published. Live at q-signals.com with an Android app on Google Play.
           </p>
           <ul class="card-bullets">
             <li>41 modules spanning Elliott Wave, Fibonacci, 61 TA-Lib candlestick patterns, SEC EDGAR insider / institutional filings, FRED macro data, Reddit / StockTwits sentiment, and earnings surprise</li>
-            <li>DQN agent learns from T1/T2/T3 ATR-scaled price targets with horizon-dependent outcome evaluation (24h / 2wk / 3mo); module weights adapt by hit rate</li>
-            <li>FastAPI server with per-client rate limiting, API key auth, CORS controls; model weights persisted to Supabase as base64 state_dict</li>
-            <li>Android app via Capacitor 6 (War Room dashboard); static site on Cloudflare Pages</li>
+            <li>DQN agent evaluates sentiment accuracy against T1/T2/T3 ATR-scaled price targets across 24h / 2wk / 3mo horizons; module weights adapt dynamically by hit rate</li>
+            <li>FastAPI server (api.q-signals.com) with rate limiting, API key auth, CORS hardening; Supabase persistence for sentiment history and model state</li>
+            <li>Android War Room app via Capacitor 6; Stripe subscription billing; static site on Cloudflare Pages</li>
           </ul>
           <div class="card-stack">
             <span class="tag tag--sm">Python</span>
